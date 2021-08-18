@@ -9,17 +9,23 @@
     let i = 0;
 do {
   i += 1;
-          var answers = ["Rock","Paper","Scissors"]
-          var computerPlay = answers[Math.floor(Math.random() * answers.length)];
+      function computerPlay(){
+        const answers = ["Rock","Paper","Scissors"]
+        return answers[Math.floor(Math.random() * answers.length)];
+      }
 
-          var playerPlay = prompt("choose your move.");
-
-          if (computerPlay==playerPlay) {console.log("tie, you both chose " + playerPlay)}
-          else if (computerPlay=="Rock" && playerPlay=="Paper")   {console.log("You win!, you chose "+ playerPlay + " and computer chose " +computerPlay)}
-          else if (computerPlay=="Paper" && playerPlay=="Scissors")   {console.log("You win!, you chose "+ playerPlay + " and computer chose " +computerPlay)}
-          else if (computerPlay=="Scissors" && playerPlay=="Rock")   {console.log("You win!, you chose "+ playerPlay + " and computer chose " +computerPlay)}
-          else {console.log("you lose! you chose "+ playerPlay +" and computer chose "+ computerPlay)}
-        } while (i < 5);
-  </script>
+      function playRound(playerSelection, computerSelection) {
+        
+        if (computerSelection==playerSelection) {console.log("tie, you both chose " + playerSelection)}
+          else if (computerSelection=="Rock" && playerSelection=="Paper")   {console.log("You win!, you chose "+ playerSelection + " and computer chose " +computerSelection)}
+          else if (computerSelection=="Paper" && playerSelection=="Scissors")   {console.log("You win!, you chose "+ playerSelection + " and computer chose " +computerSelection)}
+          else if (computerSelection=="Scissors" && playerSelection=="Rock")   {console.log("You win!, you chose "+ playerSelection + " and computer chose " +computerSelection)}
+          else {console.log("you lose! you chose "+ playerSelection +" and computer chose "+ computerSelection)}
+      }
+const playerSelection = prompt("choose your move.");
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection));
+} while (i < 5);
+</script> 
 </body>
 </html>
