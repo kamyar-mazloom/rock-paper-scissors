@@ -10,19 +10,19 @@
 do {
   i += 1;
       function computerPlay(){
-        const answers = ["Rock","Paper","Scissors"]
+        const answers = ["rock","paper","scissors"]
         return answers[Math.floor(Math.random() * answers.length)];
       }
 
       function playRound(playerSelection, computerSelection) {
         
         if (computerSelection==playerSelection) {console.log("tie, you both chose " + playerSelection)}
-          else if (computerSelection=="Rock" && playerSelection=="Paper")   {console.log("You win!, you chose "+ playerSelection + " and computer chose " +computerSelection)}
-          else if (computerSelection=="Paper" && playerSelection=="Scissors")   {console.log("You win!, you chose "+ playerSelection + " and computer chose " +computerSelection)}
-          else if (computerSelection=="Scissors" && playerSelection=="Rock")   {console.log("You win!, you chose "+ playerSelection + " and computer chose " +computerSelection)}
+          else if (computerSelection=="rock" && playerSelection=="paper")   {console.log("You win!, you chose "+ playerSelection + " and computer chose " +computerSelection)}
+          else if (computerSelection=="paper" && playerSelection=="scissors")   {console.log("You win!, you chose "+ playerSelection + " and computer chose " +computerSelection)}
+          else if (computerSelection=="scissors" && playerSelection=="rock")   {console.log("You win!, you chose "+ playerSelection + " and computer chose " +computerSelection)}
           else {console.log("you lose! you chose "+ playerSelection +" and computer chose "+ computerSelection)}
       }
-const playerSelection = prompt("choose your move.");
+const playerSelection = prompt ("choose your move.").toLowerCase();
 const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
 } while (i < 5);
