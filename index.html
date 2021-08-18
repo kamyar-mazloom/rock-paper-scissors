@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    let i = 0;
+do {
+  i += 1;
+          var answers = ["Rock","Paper","Scissors"]
+          var computerPlay = answers[Math.floor(Math.random() * answers.length)];
+
+          var playerPlay = prompt("choose your move.");
+
+          if (computerPlay==playerPlay) {console.log("tie, you both chose " + playerPlay)}
+          else if (computerPlay=="Rock" && playerPlay=="Paper")   {console.log("You win!, you chose "+ playerPlay + " and computer chose " +computerPlay)}
+          else if (computerPlay=="Paper" && playerPlay=="Scissors")   {console.log("You win!, you chose "+ playerPlay + " and computer chose " +computerPlay)}
+          else if (computerPlay=="Scissors" && playerPlay=="Rock")   {console.log("You win!, you chose "+ playerPlay + " and computer chose " +computerPlay)}
+          else {console.log("you lose! you chose "+ playerPlay +" and computer chose "+ computerPlay)}
+        } while (i < 5);
+  </script>
+</body>
+</html>
