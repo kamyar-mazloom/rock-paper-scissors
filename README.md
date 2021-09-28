@@ -6,4 +6,4 @@ In this project I've lern the partical uses of JS by creating a simple game of R
 
 [Live Demo](https://kamyar-mazloom.github.io/rock-paper-scissors/) :point_left:
 
-![Rock-paper-scissors Demo](demo/rock-paper-scissors-demo.gif)
+![Rock-paper-scissors Demo](demo/RPS-demo.gif)
